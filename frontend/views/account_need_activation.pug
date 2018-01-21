@@ -1,0 +1,23 @@
+extends layouts/master
+
+block seo
+  - var title = 'Segera Aktivasi Akun Anda | Reksawatch.com'
+  - var description = 'Aktivasikan akun anda untuk mendapatkan akses ke situs pantau harga reksadana pertama di Indonesia.'
+  title= title
+  meta(name='description', content=description)
+  meta(name='keywords', content='reksadana, rekadana terbaik, reksadana online, investasi, investasi untung, investasi reksadana')
+  meta(property='og:url', content='#')
+  meta(property='og:title', content=title)
+  meta(property='og:description', content=description)
+
+  //- TODO: fill in meta og image
+  //- TODO: make sitemap
+  meta(property='og:image', content='#')
+  link(rel='canonical', href='http://www.reksawatch.com/account_need_activation')
+
+block content
+  main.uk-container.uk-margin-top.cs-margin-fix
+    h1 Selangkah lagi menuju akses ke Reksawatch
+    p
+      = "Kami telah mengirimkan link aktivasi ke alamat email anda : " + email
+    p Segera cek inbox anda dan klik link aktivasi akun.

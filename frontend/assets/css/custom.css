@@ -1,0 +1,5 @@
+@media (max-width: 640px) {
+  .cs-margin-fix {
+    margin-top: 6em !important;
+  }
+}

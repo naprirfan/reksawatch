@@ -1,0 +1,88 @@
+//- TODO: implement google analytics
+doctype html
+html(lang='id')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    block seo
+    link(rel='stylesheet', href='/assets/css/uikit.min.css')
+    link(rel='stylesheet', href='/assets/css/custom.css')
+
+  body
+
+    if user
+      .uk-navbar-container.tm-navbar-container.uk-sticky.uk-sticky-fixed.uk-active(uk-sticky='media: 960', style='position: fixed; top: 0px; width: 1280px;')
+        .uk-container.uk-container-expand
+          nav.uk-navbar-container(uk-navbar='')
+            .uk-navbar-left
+              .uk-navbar-item(class='uk-hidden@m')
+                a(uk-navbar-toggle-icon='', href='#offcanvas', uk-toggle='', class='uk-navbar-toggle uk-navbar-toggle-icon uk-icon')
+                  svg(xmlns='http://www.w3.org/2000/svg', width='20', height='20', viewbox='0 0 20 20', icon='navbar-toggle-icon', ratio='1')
+                    rect(y='9', width='20', height='2')
+                    rect(y='3', width='20', height='2')
+                    rect(y='15', width='20', height='2')
+
+              a.uk-navbar-item.uk-logo(href='/?from=top-navbar') Reksawatch.com
+
+            .uk-navbar-right
+              ul.uk-navbar-nav(class='uk-visible@m')
+                li
+                  a(href='/rekomendasi') Rekomendasi
+                li
+                  a(href='#')
+                    span(class="uk-icon uk-margin-small-right", href="#", uk-icon="icon: user")
+                    | Akun
+                  .uk-navbar-dropdown
+                    ul.uk-nav.uk-navbar-dropdown-nav
+                      li
+                        a(href='/signout?from=top-navbar') Keluar
+
+    else
+      .uk-navbar-container.tm-navbar-container.uk-sticky.uk-sticky-fixed.uk-active(uk-sticky='media: 960', style='position: fixed; top: 0px; width: 1280px;')
+        .uk-container.uk-container-expand
+          nav.uk-navbar
+            .uk-navbar-left
+              .uk-navbar-item(class='uk-hidden@m')
+                a(uk-navbar-toggle-icon='', href='#offcanvas', uk-toggle='', class='uk-navbar-toggle uk-navbar-toggle-icon uk-icon')
+                  svg(xmlns='http://www.w3.org/2000/svg', width='20', height='20', viewbox='0 0 20 20', icon='navbar-toggle-icon', ratio='1')
+                    rect(y='9', width='20', height='2')
+                    rect(y='3', width='20', height='2')
+                    rect(y='15', width='20', height='2')
+
+              a.uk-navbar-item.uk-logo(href='/?from=top-navbar') Reksawatch.com
+            .uk-navbar-right
+              ul.uk-navbar-nav(class='uk-visible@m')
+                li
+                  a(href='/signin?from=top-navbar') Masuk
+                li
+                  a(href='/signup?from=top-navbar') Daftar
+
+    block content
+
+    #offcanvas.uk-offcanvas(uk-offcanvas='mode: push; overlay: true')
+      .uk-offcanvas-bar
+        .uk-panel
+          if user
+            ul.uk-nav.uk-nav-default.tm-nav
+              li.uk-nav-header Reksawatch.com
+              li
+                a(href='/?from=sidebar') Home
+              li
+                a(href='/rekomendasi?from=sidebar') Rekomendasi
+              li
+                a(href='/signout?from=sidebar') Keluar
+          else
+            ul.uk-nav.uk-nav-default.tm-nav
+              li.uk-nav-header Reksawatch.com
+              li
+                a(href='/?from=sidebar') Home
+              li
+                a(href='/signin?from=sidebar') Masuk
+              li
+                a(href='/signup?from=sidebar') Daftar
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='/assets/js/uikit.min.js')
+    script(src='/assets/js/uikit-icons.min.js')
+
+    block script

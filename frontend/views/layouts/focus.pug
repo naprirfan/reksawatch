@@ -1,0 +1,22 @@
+//- TODO: implement google analytics
+doctype html
+html(lang='id')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    block seo
+    link(rel='stylesheet', href='/assets/css/uikit.min.css')
+  body
+    .uk-navbar-container.tm-navbar-container.uk-sticky.uk-sticky-fixed.uk-active
+      .uk-container.uk-container-expand
+        nav.uk-navbar-container.uk-margin(uk-navbar='')
+          .uk-navbar-center
+            a.uk-navbar-item.uk-logo(href='/?from=top-navbar-focus') Reksawatch.com
+
+    block content
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='/assets/js/uikit.min.js')
+    script(src='/assets/js/uikit-icons.min.js')
+
+    block script

@@ -1,0 +1,35 @@
+{
+  "name": "reksadana",
+  "version": "1.0.0",
+  "description": "POC for technical analysis with moving average",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naprirfan/reksadana.git"
+  },
+  "author": "Muhammad Irfan",
+  "bugs": {
+    "url": "https://github.com/naprirfan/reksadana/issues"
+  },
+  "homepage": "https://github.com/naprirfan/reksadana#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.1",
+    "cheerio": "^0.22.0",
+    "csv-parser": "^1.11.0",
+    "express": "^4.14.0",
+    "google-finance": "^0.1.9",
+    "jwt-simple": "^0.5.1",
+    "mongoose": "^4.7.2",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
+    "passport-local": "^1.0.0",
+    "redis": "^2.6.5",
+    "request": "^2.74.0"
+  }
+}

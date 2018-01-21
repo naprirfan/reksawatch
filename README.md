@@ -1,1 +1,1 @@
-# reksawatch
+#POC for determining mutual funds trend

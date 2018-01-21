@@ -1,0 +1,29 @@
+extends layouts/master
+
+block seo
+  - var title = 'Situs Pantau Reksadana | Reksawatch.com'
+  - var description = 'Situs pantau harga reksadana pertama di Indonesia. Dapatkan notifikasi terkini tentang sinyal beli produk reksadana favorit anda.'
+  title= title
+  meta(name='description', content=description)
+  meta(name='keywords', content='reksadana, rekadana terbaik, reksadana online, investasi, investasi untung, investasi reksadana')
+  meta(property='og:url', content='#')
+  meta(property='og:title', content=title)
+  meta(property='og:description', content=description)
+
+  //- TODO: fill in meta og image
+  //- TODO: make sitemap
+  meta(property='og:image', content='#')
+  link(rel='canonical', href='http://www.reksawatch.com')
+
+block content
+  main.uk-container.uk-margin-top.cs-margin-fix
+    h1 Investasikan Uangmu di Saat yang Tepat
+    p Reksawatch adalah layanan yang menyediakan notifikasi sinyal beli reksadana.
+    a.uk-button.uk-button-primary(href='/signup') Daftar sekarang
+
+    h2 Keuntungan bergabung di Reksawatch
+    ul
+      li Investasi disaat Terbaik
+      li Rekomendasi Terbaik
+      li Maksimalkan keuntungan anda
+    a.uk-button.uk-button-primary(href='/signup') Daftar sekarang

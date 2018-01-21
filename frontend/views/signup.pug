@@ -1,0 +1,21 @@
+extends layouts/focus
+
+block seo
+  title Daftar | Reksawatch.com
+  link(rel='canonical', href='http://www.reksawatch.com/signup')
+
+block content
+  .uk-container.uk-container-small
+    h1.uk-heading-line.uk-text-center.uk-margin-top Daftar akun baru sekarang
+    form(action='/signup', method='POST')
+      input(type='hidden', name='_csrf', value=csrfToken)
+      input.uk-input.uk-margin-top(type='email', name='email', placeholder='Email', tabindex='1', required="true")
+      p.uk-text-meta Pastikan email yang anda tuliskan valid
+      input.uk-input.uk-margin-top(type='password', name='password', placeholder='Password', tabindex='2', minlength="6", required="true")
+      p
+        = 'Dengan klik daftar, Anda telah menyetujui '
+        a(href='#') Aturan Penggunaan
+        = ' dan '
+        a(href='#') Kebijakan Privasi
+        = ' dari Reksawatch'
+      button.uk-button.uk-button-primary.uk-margin-top.uk-width-1-1(type='submit') Daftar

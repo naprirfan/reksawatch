@@ -1,0 +1,32 @@
+extends layouts/master
+
+block seo
+  title Rekomendasi Hari Ini | Reksawatch.com
+
+block content
+  main#js-container.uk-container.uk-margin-top.cs-margin-fix
+    h1 Rekomendasi Hari Ini
+    span.uk-text-meta Diupdate terakhir pada:
+    span.js-last-updated-at.uk-text-meta
+
+    dl.uk-description-list
+      dd.js-recommendation
+
+    h2 Histori setahun terakhir
+    span.uk-badge.uk-margin-right(style='background: #FFE381') IHSG
+    span.uk-badge.uk-margin-right(style='background: #64B6AC') Momentum Pendek
+    span.uk-badge.uk-margin-right(style='background: #CC2936') Momentum Menengah
+    span.uk-badge(style='background: #643173') Momentum Panjang
+    .js-historical-graphic.uk-margin-top
+      img.js-loader-historical-graphic(src='/assets/img/loader.gif', alt='loader', style='width: 3em; height: 3em;')
+
+    h2 Daftar reksadana
+    .js-mutual-fund-list.uk-margin-top.uk-margin-bottom
+      img.js-loader-mutual-fund-list(src='/assets/img/loader.gif', alt='loader', style='width: 3em; height: 3em;')
+
+  input.js-env(type='hidden', value=env)
+
+block script
+  script(src='https://d3js.org/d3.v4.min.js')
+  script(type='text/javascript', src='/assets/js/recommendation_graphic.js')
+  script(type='text/javascript', src='/assets/js/mutual_fund_list.js')
